@@ -1,65 +1,56 @@
-import Image from "next/image";
-
 export default function Home() {
+  const blog = {
+    title: "The Art of Simplicity in Design",
+    excerpt:
+      "Simplicity is not the absence of detail — it’s the presence of intention. Minimal design makes room for clarity, focus, and premium confidence.",
+    date: "2026-03-26",
+    imageUrl:
+      "https://images.unsplash.com/photo-1526481280695-3c687fd643ed?auto=format&fit=crop&w=2400&q=80",
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <div className="animate-fade-in">
+      <section className="mx-auto w-full max-w-6xl px-6 pt-12">
+        <div className="flex flex-col gap-3">
+          <h1 className="font-sans text-4xl font-bold tracking-tight text-black md:text-5xl">
+            Editorial Minimalism
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="max-w-2xl text-base leading-7 text-black/70">
+            A premium black-and-white blog experience. Smooth hover motion,
+            refined typography, and intentional whitespace.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="mx-auto w-full max-w-6xl px-6 pt-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <article className="group rounded-2xl border border-[#e5e5e5] bg-white transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_10px_26px_rgba(0,0,0,0.06)]">
+            <a href="/sample" className="block">
+              <div className="relative aspect-[16/9] overflow-hidden rounded-t-2xl bg-white">
+                <img
+                  src={blog.imageUrl}
+                  alt={blog.title}
+                  className="h-full w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.04]"
+                  loading="lazy"
+                />
+              </div>
+              <div className="p-6">
+                <dl className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-black/60">
+                  <div>{blog.date}</div>
+                  <div className="h-1 w-1 rounded-full bg-black/25" aria-hidden="true" />
+                  <div className="font-medium uppercase tracking-widest">Blog</div>
+                </dl>
+                <h2 className="mt-4 text-xl font-bold tracking-tight text-black">
+                  {blog.title}
+                </h2>
+                <p className="mt-3 text-sm leading-6 text-black/80">
+                  {blog.excerpt}
+                </p>
+              </div>
+            </a>
+          </article>
         </div>
-      </main>
+      </section>
     </div>
   );
 }
