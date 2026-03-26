@@ -40,7 +40,7 @@ export default function BlogPage() {
           <img
             src={blog.imageUrl}
             alt={blog.title}
-            className="w-full h-auto max-h-[500px] object-cover"
+            className="w-[500px] h-[500px] object-cover"
             loading="eager"
           />
         </div>
