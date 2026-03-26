@@ -36,11 +36,11 @@ export default function BlogPage() {
           {blog.title}
         </h1>
 
-        <div className="relative mt-8 overflow-hidden rounded-2xl border border-[#e5e5e5] bg-white">
+        <div className="relative mt-8 overflow-hidden rounded-2xl border border-[#e5e5e5] bg-gray-50 flex justify-center">
           <img
             src={blog.imageUrl}
             alt={blog.title}
-            className="h-80 w-full object-cover md:h-[420px]"
+            className="w-full h-auto max-h-[500px] object-cover"
             loading="eager"
           />
         </div>
