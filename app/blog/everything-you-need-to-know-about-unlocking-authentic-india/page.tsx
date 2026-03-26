@@ -4,7 +4,7 @@ export default function BlogPage() {
   const blog = {
     title: "Everything You Need to Know About Unlocking Authentic India:",
     date: "2026-03-26",
-    imageUrl: "http://localhost:8000/static/generated/938e54264752.png",
+    imageUrl: "/blog-images/938e54264752.png",
     content: {
       intro: "<h1>Everything You Need to Know About Unlocking Authentic India: How Our New Capsules Preserve Coorg &amp; Chikmagalur's Finest</h1>",
       sections: [
